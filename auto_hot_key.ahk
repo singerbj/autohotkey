@@ -50,7 +50,7 @@ EnvGet, JFROG_TOKEN, JFROG_TOKEN
 	StringReplace,JFROG_TOKEN,JFROG_TOKEN,`n,,A
 	StringReplace,JFROG_TOKEN,JFROG_TOKEN,`r,,A
 	JFROG_TOKEN := RegExReplace(JFROG_TOKEN,"\s+$")
-    SendInput, wget --header='X-JFrog-Art-Api: %JFROG_TOKEN%%a_space%
+    SendInput, wget --header='X-JFrog-Art-Api: %JFROG_TOKEN%'%a_space%
 return
 
 
@@ -58,5 +58,5 @@ return
 	StringReplace,JFROG_TOKEN,JFROG_TOKEN,`n,,A
 	StringReplace,JFROG_TOKEN,JFROG_TOKEN,`r,,A
 	JFROG_TOKEN := RegExReplace(JFROG_TOKEN,"\s+$")
-    SendInput, curl --header 'X-JFrog-Art-Api: %JFROG_TOKEN%%a_space%
+    SendInput, curl --header 'X-JFrog-Art-Api: %JFROG_TOKEN%'%a_space%
 return
