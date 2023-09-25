@@ -24,14 +24,14 @@ return
 LAlt & e::
 GetKeyState,isLShiftDown,LShift,P
 IfEqual,isLShiftDown,D
-    Run restart_explorer.bat
+    Run ..\restart_explorer.bat
 return
 
 ;fix DNS for WSL
 LAlt & d::
 GetKeyState,isLShiftDown,LShift,P
 IfEqual,isLShiftDown,D
-    Run fix_dns.ps1
+    Run ..\fix_dns.ps1
 return
 
 
